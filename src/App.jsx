@@ -13,11 +13,12 @@ const App = () => {
   useEffect(() => {
     noteService
       .getAll()
-      .then(intialNotes => {
-        setNotes(intialNotes)
+      .then(initialNotes => {
+        setNotes(initialNotes)
       }) 
   }, [])
-
+  console.log("Notes:", notes);
+  
   const notesToShow = showAll
     ? notes
     : notes.filter(note => note.important)
