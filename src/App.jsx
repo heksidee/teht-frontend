@@ -14,11 +14,9 @@ const App = () => {
     noteService
       .getAll()
       .then(initialNotes => {
-        console.log("Fetched notes:", initialNotes);
         setNotes(initialNotes)
       }) 
   }, [])
-  console.log("Notes:", notes);
   
   const notesToShow = showAll
     ? notes
