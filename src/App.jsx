@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Footer from "./components/Footer"
 import Note from "./components/Note"
 import Notification from "./components/Notification"
@@ -40,6 +40,7 @@ const App = () => {
     : notes.filter(note => note.important)
 
   const addNote = (noteObject) => {
+    noteFormRef.current.toggleVisibility()
     noteService
       .create(noteObject)
       .then(returnedNote => {
@@ -141,6 +142,8 @@ const App = () => {
       </form>
   )
 
+  const noteFormRef = useRef()
+
   return (
     <div>
       <h1>Notes</h1>
@@ -150,7 +153,7 @@ const App = () => {
       {!user && loginForm()}
       {user && <div>
         <p>{user.username} logged in</p>
-        <Toggleable buttonLabel="new note">
+        <Toggleable buttonLabel="new note" ref={noteFormRef}>
           <NoteForm createNote={addNote}/>
         </Toggleable>
         </div>
