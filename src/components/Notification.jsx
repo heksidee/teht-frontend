@@ -1,10 +1,10 @@
-import "./NotificationStyles.css"
+import './NotificationStyles.css'
 
 const Notification = ({ message }) => {
-    if (message === null) {
-        return null;
-    }
-    return <div className="notification">{message}</div>
+  if (message === null) {
+    return null
+  }
+  return <div className="notification">{message}</div>
 }
 
-export default Notification;
+export default Notification
