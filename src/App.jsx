@@ -5,7 +5,7 @@ import Notification from './components/Notification'
 import noteService from './services/notes'
 import loginService from './services/login'
 import LoginForm from './components/LoginForm'
-import Toggleable from './components/Togglable'
+import Togglable from './components/Togglable'
 import NoteForm from './components/NoteForm'
 
 const App = () => {
@@ -152,9 +152,9 @@ const App = () => {
       {!user && loginForm()}
       {user && <div>
         <p>{user.username} logged in</p>
-        <Toggleable buttonLabel="new note" ref={noteFormRef}>
+        <Togglable buttonLabel="new note" ref={noteFormRef}>
           <NoteForm createNote={addNote}/>
-        </Toggleable>
+        </Togglable>
       </div>
       }
       <div>

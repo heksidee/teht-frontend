@@ -1,6 +1,6 @@
 import { useState, useImperativeHandle, forwardRef } from 'react'
 
-const Toggleable = forwardRef((props, ref) => {
+const Togglable = forwardRef((props, ref) => {
   const [visible, setVisible] = useState(false)
 
   const hideWhenVisible = { display: visible ? 'none' : '' }
@@ -29,4 +29,4 @@ const Toggleable = forwardRef((props, ref) => {
   )
 })
 
-export default Toggleable
+export default Togglable
