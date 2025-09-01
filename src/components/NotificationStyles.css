@@ -1,5 +1,5 @@
 .error {
-    background-color: lightpink;
+    color: rgb(255, 0, 0);
     border: 1px solid;
     border-color: rgb(255, 0, 0);
     padding: 0.5em;
