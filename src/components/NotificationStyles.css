@@ -1,7 +1,7 @@
 .error {
-    background-color: lightyellow;
+    background-color: lightpink;
     border: 1px solid;
-    border-color: darkgoldenrod;
+    border-color: rgb(255, 0, 0);
     padding: 0.5em;
     margin: 0.5em;
 }
